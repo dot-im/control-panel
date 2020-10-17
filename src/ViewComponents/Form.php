@@ -8,21 +8,21 @@ use Illuminate\View\Component;
 class Form extends Component
 {
     /**
-     * Forum method
+     * Forum method.
      *
      * @var string
      */
     public $method;
 
     /**
-     * Forum action
+     * Forum action.
      *
      * @var string|null
      */
     public $action;
 
     /**
-     * Forum id
+     * Forum id.
      *
      * @var string|null
      */

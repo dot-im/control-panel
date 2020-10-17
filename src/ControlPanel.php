@@ -2,21 +2,20 @@
 
 namespace Dotim\CP;
 
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class ControlPanel
 {
     /**
      * sidebar menus list.
      *
-     * @var array $menu
+     * @var array
      */
     private $menu = [];
 
     /**
-     *
      * @var null
      */
     private $currentCategory = null;
@@ -59,7 +58,7 @@ class ControlPanel
     {
         $this->currentCategory = $category;
 
-        if (!isset($this->menu[$category])) {
+        if (! isset($this->menu[$category])) {
             $this->menu[$category] = $category;
         }
 
@@ -82,23 +81,22 @@ class ControlPanel
             $category = $this->currentCategory;
         }
 
-        if (!$itemUrl) {
-            $itemUrl = "{$this->config['url']}/" . Str::slug(mb_strtolower($itemTitle));
+        if (! $itemUrl) {
+            $itemUrl = "{$this->config['url']}/".Str::slug(mb_strtolower($itemTitle));
         }
 
-        $itemUrl = "{$this->config['url']}/" . ltrim($itemUrl, '/');
+        $itemUrl = "{$this->config['url']}/".ltrim($itemUrl, '/');
 
         if (isset($this->menu[$category]) && is_array($this->menu[$category])) {
             $this->menu[$category][] = ['title' => $itemTitle, 'url' => $itemUrl];
         } else {
             $this->menu[$category] = [
-                ['title' => $itemTitle, 'url' => $itemUrl]
+                ['title' => $itemTitle, 'url' => $itemUrl],
             ];
         }
 
         return $this;
     }
-
 
     /**
      * response to ajax.
@@ -163,9 +161,9 @@ class ControlPanel
     public function formScripts()
     {
         if (file_exists(public_path('assets/control-panel/js/forum-support.js'))) {
-            return "<script src=\"" . asset('assets/control-panel/js/forum-support.js') . "\"></script>";
+            return '<script src="'.asset('assets/control-panel/js/forum-support.js').'"></script>';
         } else {
-            return "<script>" . file_get_contents(base_path('vendor/dot-im/control-panel/src/Dist/js/forum-support.js')) . "</script>";
+            return '<script>'.file_get_contents(base_path('vendor/dot-im/control-panel/src/Dist/js/forum-support.js')).'</script>';
         }
     }
 }

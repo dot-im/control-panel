@@ -2,27 +2,26 @@
 
 namespace Dotim\CP\ViewComponents;
 
-use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
 class Input extends Component
 {
     /**
-     * Input type
+     * Input type.
      *
      * @var string
      */
     public $type;
 
     /**
-     * Input label
+     * Input label.
      *
      * @var string|null
      */
     public $label;
 
     /**
-     * Input id
+     * Input id.
      *
      * @var string|null
      */

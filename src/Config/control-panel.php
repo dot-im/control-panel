@@ -6,33 +6,33 @@ return [
     | Control Panel Middleware
     |--------------------------------------------------------------------------
     */
-    "middleware" => ["web"],
+    'middleware' => ['web'],
 
     /*
     |--------------------------------------------------------------------------
     | Control Panel Url
     |--------------------------------------------------------------------------
     */
-    "url" => "/control-panel",
+    'url' => '/control-panel',
 
     /*
     |--------------------------------------------------------------------------
     | Control Panel Welcome Page
     |--------------------------------------------------------------------------
     */
-    "index-page" => "/control-panel/server-information",
+    'index-page' => '/control-panel/server-information',
 
     /*
     |--------------------------------------------------------------------------
     | Control Panel Controllers Namespaces
     |--------------------------------------------------------------------------
     */
-    "namespace" => "App\Http\Controllers\ControlPanel",
+    'namespace' => "App\Http\Controllers\ControlPanel",
 
     /*
     |--------------------------------------------------------------------------
     | Control Panel Routes File Path
     |--------------------------------------------------------------------------
     */
-    "routes-file" => base_path('routes/control-panel.php')
+    'routes-file' => base_path('routes/control-panel.php'),
 ];
