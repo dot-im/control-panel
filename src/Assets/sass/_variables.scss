@@ -1,0 +1,218 @@
+// Color system
+
+$white:    #ffffff !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #eeeeee !default;
+$gray-300: #e0e0e0 !default;
+$gray-400: #bdbdbd !default;
+$gray-500: #9e9e9e !default;
+$gray-600: #757575 !default;
+$gray-700: #616161 !default;
+$gray-800: #424242 !default;
+$gray-900: #212121 !default;
+$black:    #000000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+    (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+    ), $grays
+);
+
+$blue:         #2196f3 !default;
+$indigo:       #3f51b5 !default;
+$purple:       #9c27b0 !default;
+$pink:         #e91e63 !default;
+$red:          #f44336 !default;
+$orange:       #ff9800 !default;
+$yellow:       #ffeb3b !default;
+$green:        #4caf50 !default;
+$teal:         #009688 !default;
+$cyan:         #00bcd4 !default;
+
+$lime:         #cddc39 !default;
+$amber:        #ffc107 !default;
+$brown:        #795548 !default;
+$deep-purple:  #673ab7 !default;
+$deep-orange:  #ff5722 !default;
+$light-blue:   #03a9f4 !default;
+$light-green:  #8bc34a !default;
+$blue-grey:    #404E67 !default;
+
+
+$colors: () !default;
+$colors: map-merge(
+    (
+        "blue":       $blue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800,
+
+        "lime" : $lime,
+        "amber" : $amber,
+        "brown" : $brown,
+        "deep-purple" : $deep-purple,
+        "deep-orange" : $deep-orange,
+        "light-blue" : $light-blue,
+        "light-green" : $light-green,
+        "blue-grey" : $blue-grey
+    ),
+    $colors
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "primary":    $blue,
+        "secondary":  $gray-600,
+        "success":    $green,
+        "info":       $cyan,
+        "warning":    $yellow,
+        "danger":     $red,
+        "light":      $gray-100,
+        "dark":       $gray-800
+    ),
+    $theme-colors
+);
+
+$theme-colors: map_merge($colors, $theme-colors);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900 !default;
+$yiq-text-light:            $white !default;
+
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3)
+    ), $spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+    (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+    ),
+    $sizes
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:     $gray-100 !default;
+$body-color:  $gray-900 !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: theme-color("primary") !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+
+$font-size-document:          14px !default;
+$font-size-base:              1rem !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+// Sidebar
+$sidebar-collapsed-width: 5rem;
+$sidebar-expanded-width: 18rem;
+$sidebar-collapse-transition: .1s linear;
+
+$btn-focus-box-shadow: unset !important;
+
+$navbar-height: 4rem;

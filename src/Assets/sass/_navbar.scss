@@ -1,0 +1,25 @@
+body[dir=rtl] {
+    .navbar {
+        .navbar-search {
+            .search-btn {
+            right: unset !important;
+            left: .5rem;
+            }
+        }
+    }
+}
+
+.navbar {
+    height: $navbar-height;
+
+    .navbar-search {
+        .search-btn {
+            position: absolute;
+            right: .5rem;
+            top: 0;
+            bottom: 0;
+            z-index: 999999999;
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+html {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-document;
+}
+
+::-webkit-scrollbar {
+    width: .75rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $blue-grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darken($red, 15%);
+}
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+#main {
+    z-index: -1;
+}
+
+fieldset {
+    @extend .border, .rounded, .px-2;
+}
+
+legend {
+    width: auto !important;
+    font-size: 1rem !important;
+    color: $gray-600 !important;
+}

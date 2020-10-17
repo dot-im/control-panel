@@ -1,0 +1,22 @@
+// Bootstrap functions
+@import "~bootstrap/scss/functions";
+
+// Variables
+@import "variables";
+
+// Normalization of HTML elements
+@import "reboot";
+
+// Font Awesome
+@import "~font-awesome/scss/font-awesome";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Navbar
+@import "navbar";
+
+// control panel sidebar
+@import "sidebar";
+
+@import "card";
