@@ -7,21 +7,21 @@ use Illuminate\View\Component;
 class Card extends Component
 {
     /**
-     * Card header
+     * Card header.
      *
      * @var string
      */
     public $header;
 
     /**
-     * Card body
+     * Card body.
      *
      * @var string
      */
     public $body;
 
     /**
-     * Card footer
+     * Card footer.
      *
      * @var string
      */

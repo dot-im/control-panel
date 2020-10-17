@@ -23,7 +23,7 @@ class Select extends Component
     public function __construct($label = '', $id = '')
     {
         $this->data = [
-            'label' => $label, 'id' => $id ? $id : Str::random(10)
+            'label' => $label, 'id' => $id ? $id : Str::random(10),
         ];
     }
 
